@@ -1,0 +1,22 @@
+{
+  "name": "esnode",
+  "version": "1.0.0",
+  "description": "Easy way to validate and access at any node of part of [ECMAScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm) recursive traversing functionality.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasselTrankos/esnode.git"
+  },
+  "keywords": ["AST", "ECMAScript", "node", "search"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasselTrankos/esnode/issues"
+  },
+  "homepage": "https://github.com/kasselTrankos/esnode#readme"
+}
