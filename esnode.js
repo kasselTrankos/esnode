@@ -18,7 +18,12 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
   THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+var validate = require('./lib/validate');
 var esnode = function(path){
-  
+    return {
+        validate: function(){
+
+        }
+    }  
 };
 module.exports = esnode;
