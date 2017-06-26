@@ -18,11 +18,19 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
   THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-var validate = require('./lib/validate');
-var esnode = function(path){
+var validate = require('./lib/validate')
+    query = require('./lib/query');
+var esnode = function(ast){
     return {
-        validate: function(){
-
+        query: function(path, callback){
+            query(ast, function(o){
+                validate(path, function(founded, obj){
+                    if(founded) callback(founded, obj)
+                })(o);
+            }, function(o){
+              return (Object.prototype.toString.call(o) === '[object Array]' || 
+                Object.prototype.toString.call(o) === '[object Object]');
+            });
         }
     }  
 };
