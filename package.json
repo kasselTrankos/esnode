@@ -23,8 +23,9 @@
     "search"
   ],
   "bin": {
-    "esnode": "./esnode.js"
+    "esnode": "./index.js"
   },
+  
   "author": "",
   "license": "ISC",
   "bugs": {
