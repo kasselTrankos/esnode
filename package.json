@@ -1,6 +1,6 @@
 {
   "name": "esnode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy way to validate and access at any node of part of [ECMAScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm) recursive traversing functionality.",
   "main": "index.js",
   "dependencies": {
@@ -22,7 +22,9 @@
     "node",
     "search"
   ],
-   "bin" : { "esnode" : "./esnode.js" },
+  "bin": {
+    "esnode": "./esnode.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
