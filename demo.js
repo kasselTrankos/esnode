@@ -7,8 +7,9 @@ var ast = esprima.parse(srcCode.toString(), {
     loc: true
 });
 var _finds = []
-var _f = esnode(ast).query('body[1].expression.arguments[0]', function(value, obj){
-	_finds.push(value);
+var _f = esnode(ast).query('body[1].expression.arguments[0].callee.object.name="$scope"', function(value, obj){
+	console.log(value, 'asdodaes', obj);
+	_finds.push(obj);
 });
 
 jsonfile.writeFile('./file.json', _finds, {spaces: 4}, function (err) {

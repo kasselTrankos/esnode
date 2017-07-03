@@ -25,7 +25,7 @@ var esnode = function(ast){
         query: function(path, callback){
           query(ast, function(o){
                 validate(path, function(founded, obj){
-                    if(founded) callback(founded, obj)
+                    if(founded || founded===false) callback(founded, obj)
                 })(o);
             }, function(o){
               return (Object.prototype.toString.call(o) === '[object Array]' || 
