@@ -7,8 +7,8 @@ var ast = esprima.parse(srcCode.toString(), {
     loc: true
 });
 var _finds = []
-var _f = esnode(ast).query('body[1].expression.arguments[0].callee.object.name="$scope"', function(value, obj){
-	console.log(value, 'asdodaes', obj);
+var _f = esnode(ast).query('body[1].expression.arguments[0].callee.object.name=/$\$scope^/', function(value, obj){
+	// console.log(value, 'asdodaes', obj);
 	_finds.push(obj);
 });
 
