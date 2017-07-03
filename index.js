@@ -23,7 +23,7 @@ var validate = require('./lib/validate')
 var esnode = function(ast){
     return {
         query: function(path, callback){
-            query(ast, function(o){
+          query(ast, function(o){
                 validate(path, function(founded, obj){
                     if(founded) callback(founded, obj)
                 })(o);
