@@ -6,7 +6,8 @@ This is a little demo of use, can be find in *demo.js*:
 ```javascript
 var _finds = []
 var _f = esnode(ast).query('left.name', function(value, obj){
-	_finds.push({name: value, obj:obj});
+	console.log(value, 'asdodaes', obj);
+	_finds.push(obj);
 });
 ```
 
