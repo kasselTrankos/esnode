@@ -7,7 +7,7 @@ var ast = esprima.parse(srcCode.toString(), {
     loc: true
 });
 var _finds = []
-var _f = esnode(ast).query('object.name=/\$.*/', function(value, obj){
+var _f = esnode(ast).query('value=/\$w.*/', function(value, obj){
 	//console.log(' computed is ',value);
 	if(value===true)_finds.push(obj);
 });
